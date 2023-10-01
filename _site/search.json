@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "ShinyTools",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1 + 1 +1\n\n[1] 4"
+    "text": "Will this work, if I write something here?\n#| standalone: true\n\nlibrary(shiny)\n\nui &lt;- fluidPage(\n  selectInput(\"inputid\", \"What the what?\", c(\"1\", \"2\", \"3\"))\n)\n\nserver &lt;- function(input, output, session) {\n  \n}\n\nshinyApp(ui, server)"
   },
   {
     "objectID": "about.html",

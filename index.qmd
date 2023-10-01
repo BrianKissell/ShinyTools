@@ -1,11 +1,25 @@
 ---
 title: "ShinyTools"
+filters: 
+   - shinylive
 ---
 
-This is a Quarto website.
+Will this work, if I write something here?
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+```{shinylive-r}
+#| standalone: true
 
-```{r}
-1 + 1 + 1 +1
+library(shiny)
+
+ui <- fluidPage(
+  selectInput("inputid", "What the what?", c("1", "2", "3"))
+)
+
+server <- function(input, output, session) {
+  
+}
+
+shinyApp(ui, server)
+
+
 ```
