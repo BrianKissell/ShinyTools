@@ -4,7 +4,15 @@ filters:
    - shinylive
 ---
 
-Will this work, if I write something here?
+\### Type of Studies
+
+1\. Immersion Studies with Qualitative Interview
+
+2\. Surveys
+
+3\. Direct Mail Studies with Qualitative Interviews
+
+4\. Image Evaluation Studies
 
 ```{shinylive-r}
 #| standalone: true
@@ -19,6 +27,22 @@ ui <- fluidPage(
       "Survey",
       "Direct Mail Studies with Qualitative Interviews",
       "Image Evaluation Study"
+      )
+    ),
+  
+  selectInput(
+    "id_location_of_study", 
+    "Where will the study take place?",  
+    c("Online",
+      "In-lab"
+      )
+    ),
+  
+  selectInput(
+    "id_n_participants_per_session", 
+    "Will this study of single or multi paricipant sessions?",  
+    c("Single",
+      "Multiple"
       )
     )
 )

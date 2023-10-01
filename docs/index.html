@@ -128,7 +128,11 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Will this work, if I write something here?</p>
+<p>### Type of Studies</p>
+<p>1. Immersion Studies with Qualitative Interview</p>
+<p>2. Surveys</p>
+<p>3. Direct Mail Studies with Qualitative Interviews</p>
+<p>4. Image Evaluation Studies</p>
 <pre class="shinylive-r" data-engine="r"><code>#| standalone: true
 
 library(shiny)
@@ -141,6 +145,22 @@ ui &lt;- fluidPage(
       "Survey",
       "Direct Mail Studies with Qualitative Interviews",
       "Image Evaluation Study"
+      )
+    ),
+  
+  selectInput(
+    "id_location_of_study", 
+    "Where will the study take place?",  
+    c("Online",
+      "In-lab"
+      )
+    ),
+  
+  selectInput(
+    "id_n_participants_per_session", 
+    "Will this study of single or multi paricipant sessions?",  
+    c("Single",
+      "Multiple"
       )
     )
 )
