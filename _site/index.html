@@ -134,7 +134,15 @@ ul.task-list li input[type="checkbox"] {
 library(shiny)
 
 ui &lt;- fluidPage(
-  selectInput("inputid", "What the what?", c("1", "2", "3"))
+  selectInput(
+    "id_type_of_study", 
+    "What is the study type?",  
+    c("Immersion Study with Qualitative Interview",
+      "Survey",
+      "Direct Mail Studies with Qualitative Interviews",
+      "Image Evaluation Study"
+      )
+    )
 )
 
 server &lt;- function(input, output, session) {

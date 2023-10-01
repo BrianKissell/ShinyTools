@@ -12,7 +12,15 @@ Will this work, if I write something here?
 library(shiny)
 
 ui <- fluidPage(
-  selectInput("inputid", "What the what?", c("1", "2", "3"))
+  selectInput(
+    "id_type_of_study", 
+    "What is the study type?",  
+    c("Immersion Study with Qualitative Interview",
+      "Survey",
+      "Direct Mail Studies with Qualitative Interviews",
+      "Image Evaluation Study"
+      )
+    )
 )
 
 server <- function(input, output, session) {
